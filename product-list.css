@@ -318,6 +318,51 @@ header{
       transition-duration: 0.6s;
       cursor: pointer;
     }
+
+    .product-list{
+        max-width: 100%;
+        height: 70%;
+      }
+    
+    .product-list h1{
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        color: rgb(88, 78, 67);
+        margin-top: 50px;
+    }
+    
+    .product-row{
+        width: 100%;
+    }
+      
+      .product-list ul{
+        width: 100%;
+        list-style: none;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+      }
+      
+      .product-list li{
+          display: inline-block;
+          max-width: 100%;
+          height: 600px;
+          
+      }
+      
+      .product-list img{
+        object-fit: cover;
+        display: block;
+        color:rgb(88, 78, 67)
+      }
+    
+      .product-list p{
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 50px;
+          font-size: 20px;
+      }
     footer{
         width: 100%;
       }
