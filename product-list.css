@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    color: #252525;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+}
+  
+  nav{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 8vh;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  nav div{
+    flex: 1;
+  }
+
+  .nav-title{
+    justify-content: center;
+  }
+
+  nav h2{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(88, 78, 67);
+  }
+
+  nav h3{
+    text-align: center;
+    font-size: 17px;
+    font-weight: lighter;
+    color:rgb(95, 93, 93);
+    padding-bottom: 20px;
+  }
+
+  nav ul{
+    display: flex;
+    float: right;
+    margin-top: 0;
+    margin-right: 20%; 
+  }
+  
+ nav li{
+   margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 30px;
+  }
+  
+  nav img {
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  
+<!----main------->
+
+.product-list{
+    max-width: 100%;
+    height: 70%;
+  }
+
+.product-list h1{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: rgb(88, 78, 67);
+    margin-top: 50px;
+
+}
+
+.product-row{
+    width:70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+  .product-list ul{
+    list-style: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+  }
+  
+  .product-list li{
+      display: inline-block;
+      max-width: 30%;
+  }
+  
+  .product-list img{
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    color:rgb(88, 78, 67)
+  }
+
+  .product-list img:hover{
+      transform: scale(1.1, 1.05);
+      transition-duration: 0.3s;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0.8;
+  }
+
+  .product-list p{
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 50px;
+  }
+
+  footer{
+    width: 100%;
+    height: 100px;
+  }
+
+  footer section{
+    display: flex;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .location{
+    margin-top: 10px;
+  }
+
+  .location h3{
+    color:rgb(88, 78, 67)
+    
+  }
+
+  .location p{
+    font-weight: lighter;
+  }
+
+  .contact{
+    margin-top: 10px;
+  }
+
+  .contact h3{
+    color:rgb(88, 78, 67)
+  }
+
+  .contact p{
+    font-weight: lighter;
+  }
+
+  .name{
+    margin-top: 10px;
+  }
+
+  .name h3{
+    color:rgb(88, 78, 67);
+
+  }
