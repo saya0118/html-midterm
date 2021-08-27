@@ -9,25 +9,36 @@
 <body>
     <header>
         <nav>
+            <div class="ham" id="ham">
+                <span class="ham_line ham_line1"></span>
+                <span class="ham_line ham_line2"></span>
+                <span class="ham_line ham_line3"></span>
+            </div>
             <div class="nav-title">
                 <h2>Botanical Floral</h2>
                 <h3>Online Boutique</h3>
             </div>
+            <div>
             <ul>
-                <li><img src="images/user_icon_001.jpg" alt="user-icon"></li>
+                <li><img type="button" onclick="location.href='login.html'" src="images/user_icon_001.jpg" alt="user-icon"></li>
                 <li><img src="images/Serch_Ui_(101).jpg" alt="search-icon"></li>
                 <li><img src="images/shopping-cart.jpg" alt="shopping-cart-icon"></li>
             </ul>
+        </div>
         </nav>
     </header>
 
     <section>
+        <table class="table-form">
         <div class="login">
             <h1>Log In</h1>
-            <table>
-                
-            </table>
+            <form action="#" method="POST">
+                <td><input type="email" placeholder="Email" id="email" required></td>
+                <td><input type="password" placeholder="Password" id="password" required></td>
+                <td><input type="submit" placeholder="SIGN IN" id="signin"></td>
+            </form>
         </div>
+    </table>
     </section>
     <footer>
         <section>
