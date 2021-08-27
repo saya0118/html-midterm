@@ -9,45 +9,61 @@ body{
     color: #252525;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     overflow-x: hidden;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
 }
 
 header{
     width: 100%;
-
+    height: 8vh;
 }
   
-nav{
+  nav{
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width:100%;
-    height: 8vh;
     background-color: white;
-    position: relative;
     overflow: hidden;
+    text-align: center;
   }
 
   nav div{
+    text-align: center;
     flex: 1;
-  }
-
-  .nav-title{
-    justify-content: center;
   }
 
   .ham {
     position: relative;
     margin-top: 17px;
-    margin-left: 15%;
-    margin-right: 0;
     width: 40px;
     height: 40px;
     cursor: pointer;
     background-color: white;
   }
   .ham_line {
-    transition: all 0.5s;
     position: absolute;
-    left: 10px;
+    left: 50%;
     width: 20px;
     height: 1px;
     background-color:rgb(88, 78, 67);
@@ -65,28 +81,23 @@ nav{
   nav h2{
     margin-top: 20px;
     color: rgb(88, 78, 67);
-    position: absolute;
+    /* position: absolute; */
   }
 
   nav h3{
     font-size: 17px;
     font-weight: lighter;
     color:rgb(95, 93, 93);
-    padding-bottom: 20px;
-    position: absolute;
-    margin-top: 42px;
   }
 
   nav ul{
-      position: absolute;
       display: flex;
-      right: 20%;
       top: 10px;
+      justify-content: center;
   }
   
  nav li{
    margin-top: 10px;
-    text-align: center;
     display: inline-block;
     margin-left: 20px;
   }
@@ -127,15 +138,15 @@ nav{
     display: inline-block;
     position: absolute;
     content: '';
-    bottom: -20px; /*下線の上下の位置*/
+    bottom: -20px;
     left: 50%;
-    width: 30px; /*下線の幅*/
-    height: 2px; /*下線の太さ*/
+    width: 30px;
+    height: 2px;
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    transform: translate(-50%); /*位置の調整*/
-    background-color: #666666; /*下線の色*/
+    transform: translate(-50%);
+    background-color: rgb(88, 78, 67)
   }
 
   table td{
@@ -153,7 +164,7 @@ nav{
       padding-top: auto;
       padding-bottom: auto;
       margin-bottom: 30px;
-      color:rgb(88, 78, 67)
+      color:rgb(88, 78, 67);
   }
 
   #signin:hover{
@@ -210,4 +221,227 @@ nav{
     color:rgb(88, 78, 67);
 
   }
+
+  @media screen and (max-width: 670px){
+      header{
+          width: 100%;
+          height: 8vh;
+      }
+    
+        nav{
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          width:100%;
+          background-color: white;
+          overflow: hidden;
+          text-align: center;
+        }
+      
+        nav div{
+          text-align: center;
+          flex: 1;
+        }
+      
+        .ham {
+          position: relative;
+          margin-top: 17px;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          background-color: white;
+        }
+        .ham_line {
+          position: absolute;
+          left: 30%;
+          width: 20px;
+          height: 1px;
+          background-color:rgb(88, 78, 67);
+        }
+        .ham_line1 {
+          top: 10px;
+        }
+        .ham_line2 {
+          top: 18px;
+        }
+        .ham_line3 {
+          top: 26px;
+        }
+      
+        nav h2{
+          margin-top: 20px;
+          color: rgb(88, 78, 67);
+          /* position: absolute; */
+        }
+      
+        nav h3{
+          font-size: 17px;
+          font-weight: lighter;
+          color:rgb(95, 93, 93);
+        }
+      
+        nav ul{
+            display: flex;
+            top: 10px;
+            justify-content: center;
+        }
+        
+       nav li{
+         margin-top: 10px;
+          display: inline-block;
+          margin-left: 10px;
+        }
+        
+        nav img {
+          height: 30px;
+          width: 100%;
+          margin-top: 10px;
+          text-decoration: none;
+        }
+      
+        nav img:hover{
+          transform: scale(1.1, 1.1);
+          transition-duration: 0.6s;
+          cursor: pointer;
+        }
+
+    footer{
+        width: 100%;
+      }
+    
+      footer section{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+      }
+    
+    
+      .location{
+        margin-top: 10px;
+      }
+    
+      .location h3{
+        color:rgb(88, 78, 67)
+        
+      }
+    
+      .location p{
+        font-weight: lighter;
+      }
+    
+      .contact{
+        margin-top: 10px;
+      }
+    
+      .contact h3{
+        color:rgb(88, 78, 67)
+      }
+    
+      .contact p{
+        font-weight: lighter;
+      }
+    
+      .name{
+        margin-top: 10px;
+      }
+    
+      .name h3{
+        color:rgb(88, 78, 67);
+    
+      }
+    
+}
+
+@media screen and (min-width: 671px) and (max-width: 1000px){
+    nav{
+      display: flex;
+      justify-content: space-between;
+      width:100%;
+      height: 8vh;
+      background-color: white;
+      position: relative;
+      text-align: center;
+    }
+  
+    nav div{
+      flex: 1;
+    }
+  
+    .ham {
+      position: relative;
+      margin-top: 17px;
+      margin-left: 10%;
+      margin-right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: white;
+    }
+    .ham_line {
+      transition: all 0.5s;
+      position: absolute;
+      left: 10px;
+      width: 20px;
+      height: 1px;
+      background-color:rgb(88, 78, 67);
+    }
+    .ham_line1 {
+      top: 10px;
+    }
+    .ham_line2 {
+      top: 18px;
+    }
+    .ham_line3 {
+      top: 26px;
+    }
+
+    .nav-title{
+      text-align: center;
+    }
+  
+    nav h2{
+      margin-top: 20px;
+      color: rgb(88, 78, 67);
+      position: absolute;
+    }
+  
+    nav h3{
+      font-size: 17px;
+      font-weight: lighter;
+      color:rgb(95, 93, 93);
+      padding-bottom: 20px;
+      position: absolute;
+      margin-top: 42px;
+    }
+  
+    nav ul{
+        position: absolute;
+        display: flex;
+        right: 10%;
+        top: 10px;
+    }
+    
+   nav li{
+     margin-top: 8px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    nav img {
+      height: 25px;
+      width: 100%;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+  
+    nav img:hover{
+      transform: scale(1.1, 1.1);
+      transition-duration: 0.6s;
+      cursor: pointer;
+    }
+}
+  
   

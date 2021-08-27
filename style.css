@@ -9,6 +9,28 @@ body{
     color: #252525;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     overflow-x: hidden;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
 }
 
 header{
@@ -31,33 +53,31 @@ header{
   }
   
   nav{
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width:100%;
-    height: 8vh;
     background-color: white;
-    position: relative;
     overflow: hidden;
+    text-align: center;
   }
 
   nav div{
+    text-align: center;
     flex: 1;
   }
 
   .ham {
     position: relative;
     margin-top: 17px;
-    margin-left: 15%;
-    margin-right: 0;
     width: 40px;
     height: 40px;
     cursor: pointer;
     background-color: white;
   }
   .ham_line {
-    transition: all 0.5s;
     position: absolute;
-    left: 10px;
+    left: 50%;
     width: 20px;
     height: 1px;
     background-color:rgb(88, 78, 67);
@@ -71,32 +91,27 @@ header{
   .ham_line3 {
     top: 26px;
   }
-  
+
   nav h2{
     margin-top: 20px;
     color: rgb(88, 78, 67);
-    position: absolute;
+    /* position: absolute; */
   }
 
   nav h3{
     font-size: 17px;
     font-weight: lighter;
     color:rgb(95, 93, 93);
-    padding-bottom: 20px;
-    position: absolute;
-    margin-top: 42px;
   }
 
   nav ul{
-      position: absolute;
       display: flex;
-      right: 20%;
       top: 10px;
+      justify-content: center;
   }
   
  nav li{
    margin-top: 10px;
-    text-align: center;
     display: inline-block;
     margin-left: 20px;
   }
@@ -113,27 +128,27 @@ header{
     transition-duration: 0.6s;
     cursor: pointer;
   }
-  
-<!----main------->
 
 main{
     background-size: cover;
+    position: absolute;
+    width: 100%;
   } 
 
 .main-contents{
-  margin-top: 20%;
+  margin-top:20%;
     text-align: center;
 }
 
 main h1{
+  text-align: center;
     margin-top: 10%;
     color: white;
     font-size: 65px;
-    position: relative;
 }
 
 main button{
-    position: relative;
+  text-align: center;
     width: 130px;
     height: 40px;
     border: none;
@@ -170,15 +185,15 @@ main button:hover{
   display: inline-block;
   position: absolute;
   content: '';
-  bottom: -5px; /*下線の上下の位置*/
+  bottom: -5px;
   left: 50%;
-  width: 30px; /*下線の幅*/
-  height: 2px; /*下線の太さ*/
+  width: 30px;
+  height: 2px;
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  transform: translate(-50%); /*位置の調整*/
-  background-color: #666666; /*下線の色*/
+  transform: translate(-50%);
+  background-color: rgb(88, 78, 67);
 }
 
 .product-row{
@@ -211,7 +226,7 @@ main button:hover{
 
   .new-product img:hover{
     transform: scale(1.1, 1.05);
-    transition-duration: 0.6s;
+    transition-duration: 1s;
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 0.8;
     cursor: pointer;
@@ -315,6 +330,134 @@ main button:hover{
   }
 
   @media screen and (max-width: 670px){
+    header{
+      width: 100%;
+      height: 70vh;
+      background-image: url("images/insung-yoon-gHbFU-CiZ0U-unsplash.jpg");
+      position: relative;
+      background-size: cover;
+  }
+    
+    header::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    nav{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width:100%;
+      background-color: white;
+      overflow: hidden;
+      text-align: center;
+    }
+  
+    nav div{
+      text-align: center;
+      flex: 1;
+    }
+  
+    .ham {
+      position: relative;
+      margin-top: 17px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: white;
+    }
+    .ham_line {
+      position: absolute;
+      left: 30%;
+      width: 20px;
+      height: 1px;
+      background-color:rgb(88, 78, 67);
+    }
+    .ham_line1 {
+      top: 10px;
+    }
+    .ham_line2 {
+      top: 18px;
+    }
+    .ham_line3 {
+      top: 26px;
+    }
+  
+    nav h2{
+      margin-top: 20px;
+      color: rgb(88, 78, 67);
+      /* position: absolute; */
+    }
+  
+    nav h3{
+      font-size: 17px;
+      font-weight: lighter;
+      color:rgb(95, 93, 93);
+    }
+  
+    nav ul{
+        display: flex;
+        top: 10px;
+        justify-content: center;
+    }
+    
+   nav li{
+     margin-top: 10px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    nav img {
+      height: 30px;
+      width: 100%;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+  
+    nav img:hover{
+      transform: scale(1.1, 1.1);
+      transition-duration: 0.6s;
+      cursor: pointer;
+    }
+  
+  main{
+      /* background-size: cover; */
+    } 
+  
+  .main-contents{
+    margin-top: 30%;
+    justify-content: center;
+  }
+  
+  main h1{
+      color: white;
+      font-size: 65px;
+      text-align: center;
+  }
+  
+  main button{
+    text-align: center;
+      width: 130px;
+      height: 40px;
+      border: none;
+      color: rgb(88, 78, 67);
+      background-color: #ffffff;
+      font-size: 15px;
+      margin-top: 10px;
+      font-weight: bold;
+  }
+  
+  main button:hover{
+     background-color: rgb(238, 185, 120);
+    cursor: pointer;
+    transition-duration: 0.7s;
+  }
+
     .new-product{
       max-width: 100%;
       height: 70%;
@@ -333,21 +476,21 @@ main button:hover{
   }
     
     .new-product ul{
-        list-style: none;
-     /* display: flex;
-     flex-direction: row; */
+      width: 100%;
+      list-style: none;
+     display: flex;
+     flex-direction: column;
      justify-content: space-around;
     }
     
     .new-product li{
         display: inline-block;
-        max-width: 30%;
+        max-width: 100%;
+        height: 450px;
         
     }
     
     .new-product img{
-      height: 80%;
-      width: 100%;
       object-fit: cover;
       display: block;
       color:rgb(88, 78, 67)
@@ -359,12 +502,244 @@ main button:hover{
         padding-bottom: 50px;
     }
 
+    .about-us{
+      width: 100%;
+      height: 115vh;
+      background-image: url("images/pexels-nadi-lindsay-2789545.jpg");
+      position: relative;
+      background-size: cover;
+    }
+  
+    .about-us::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    .about-us-content{
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  
+    .about-us h1{
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+  
+    .about-us p{
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+        text-align: center;
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        line-height: 30px;
+    }
+  
+    footer{
+      width: 100%;
+    }
+  
+    footer section{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+    }
+  
+  
+    .location{
+      margin-top: 10px;
+    }
+  
+    .location h3{
+      color:rgb(88, 78, 67)
+      
+    }
+  
+    .location p{
+      font-weight: lighter;
+    }
+  
+    .contact{
+      margin-top: 10px;
+    }
+  
+    .contact h3{
+      color:rgb(88, 78, 67)
+    }
+  
+    .contact p{
+      font-weight: lighter;
+    }
+  
+    .name{
+      margin-top: 10px;
+    }
+  
+    .name h3{
+      color:rgb(88, 78, 67);
+  
+    }
+
   }
 
+  
+
   @media screen and (min-width: 671px) and (max-width: 1000px){
+    header{
+      width: 100%;
+      height: 70vh;
+      background-image: url("images/insung-yoon-gHbFU-CiZ0U-unsplash.jpg");
+      position: relative;
+      background-size: cover;
+  
+  }
+    
+    header::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      width:100%;
+      height: 8vh;
+      background-color: white;
+      position: relative;
+      text-align: center;
+    }
+  
+    nav div{
+      flex: 1;
+    }
+  
+    .ham {
+      position: relative;
+      margin-top: 17px;
+      margin-left: 10%;
+      margin-right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: white;
+    }
+    .ham_line {
+      transition: all 0.5s;
+      position: absolute;
+      left: 10px;
+      width: 20px;
+      height: 1px;
+      background-color:rgb(88, 78, 67);
+    }
+    .ham_line1 {
+      top: 10px;
+    }
+    .ham_line2 {
+      top: 18px;
+    }
+    .ham_line3 {
+      top: 26px;
+    }
+
+    .nav-title{
+      text-align: center;
+    }
+  
+    nav h2{
+      margin-top: 20px;
+      color: rgb(88, 78, 67);
+      position: absolute;
+    }
+  
+    nav h3{
+      font-size: 17px;
+      font-weight: lighter;
+      color:rgb(95, 93, 93);
+      padding-bottom: 20px;
+      position: absolute;
+      margin-top: 42px;
+    }
+  
+    nav ul{
+        position: absolute;
+        display: flex;
+        right: 10%;
+        top: 10px;
+    }
+    
+   nav li{
+     margin-top: 8px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    nav img {
+      height: 25px;
+      width: 100%;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+  
+    nav img:hover{
+      transform: scale(1.1, 1.1);
+      transition-duration: 0.6s;
+      cursor: pointer;
+    }
+  
+  main{
+      background-size: cover;
+    } 
+  
+  .main-contents{
+    margin-top: 20%;
+      text-align: center;
+  }
+  
+  main h1{
+      margin-top: 10%;
+      color: white;
+      font-size: 65px;
+      position: relative;
+  }
+  
+  main button{
+      position: relative;
+      width: 130px;
+      height: 40px;
+      border: none;
+      color: rgb(88, 78, 67);
+      background-color: #ffffff;
+      font-size: 15px;
+      margin-top: 10px;
+      font-weight: bold;
+  }
+  
+  main button:hover{
+     background-color: rgb(238, 185, 120);
+    cursor: pointer;
+    transition-duration: 0.7s;
+  }
+
     .new-product{
       max-width: 100%;
-      height: 2000px;
+      height: 70%;
     }
   
   .new-product h1{
@@ -373,33 +748,31 @@ main button:hover{
       text-align: center;
       color: rgb(88, 78, 67);
       margin-top: 50px;
-  
   }
   
   .product-row{
-      width:70%;
-      margin-left: 15%;
+      width: 100%;
   }
     
     .new-product ul{
-        list-style: none;
+      width: 100%;
+      list-style: none;
      display: flex;
      flex-direction: row;
-     justify-content: space-between;
+     justify-content: space-around;
     }
     
     .new-product li{
         display: inline-block;
+        max-width: 30%;
+        height: 500px;
         
     }
     
     .new-product img{
-      height: 400px;
-      width: 350px;
       object-fit: cover;
       display: block;
       color:rgb(88, 78, 67)
-  
     }
   
     .new-product p{
@@ -407,5 +780,95 @@ main button:hover{
         padding-top: 10px;
         padding-bottom: 50px;
     }
+
+    .about-us{
+      width: 100%;
+      height: 90vh;
+      background-image: url("images/pexels-nadi-lindsay-2789545.jpg");
+      position: relative;
+      background-size: cover;
+    }
   
+    .about-us::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    .about-us-content{
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  
+    .about-us h1{
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+  
+    .about-us p{
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+        text-align: center;
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        line-height: 30px;
+    }
+  
+    footer{
+      width: 100%;
+    }
+  
+    footer section{
+      /* display: flex; */
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      /* justify-content: space-between; */
+      margin-top: 20px;
+    }
+  
+    .location{
+      margin-top: 10px;
+    }
+  
+    .location h3{
+      color:rgb(88, 78, 67)
+      
+    }
+  
+    .location p{
+      font-weight: lighter;
+    }
+  
+    .contact{
+      margin-top: 10px;
+    }
+  
+    .contact h3{
+      color:rgb(88, 78, 67)
+    }
+  
+    .contact p{
+      font-weight: lighter;
+    }
+  
+    .name{
+      margin-top: 10px;
+    }
+  
+    .name h3{
+      color:rgb(88, 78, 67);
+  
+    }
+
   }
